@@ -19,3 +19,7 @@ spec:
   - repo: https://github.com/magreenberg/httpserver-ci-demo.git
     name: httpserver-ci-demo
     private: false
+ - repo: https://github.com/magreenberg/httpserver-ci-cd-demo.git
+    name: httpserver-cd
+    private: false
+
