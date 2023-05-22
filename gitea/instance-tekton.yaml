@@ -1,14 +1,14 @@
 apiVersion: gpte.opentlc.com/v1
 kind: Gitea
 metadata:
-  name: gitea-with-admin
+  name: gitea-tekton
   annotations:
     argocd.argoproj.io/sync-wave: "3"
 spec:
   giteaSsl: true
   giteaAdminUser: admin
-  giteaAdminPassword: ""
-  giteaAdminPasswordLength: 8
+  giteaAdminPassword: "Aa12345678!"
+  giteaAdminPasswordLength: 11
   giteaAdminEmail: opentlc-mgr@redhat.com
   giteaCreateUsers: true
   giteaGenerateUserFormat: "user%d"
