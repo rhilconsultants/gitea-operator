@@ -3,7 +3,7 @@ kind: Gitea
 metadata:
   name: gitea-tekton
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "4"
 spec:
   giteaSsl: true
   giteaAdminUser: opentlc-mgr
@@ -11,7 +11,7 @@ spec:
   giteaAdminPasswordLength: 32
   giteaAdminEmail: opentlc-mgr@redhat.com
   giteaCreateUsers: true
-  giteaGenerateUserFormat: "user-%d"
+  giteaGenerateUserFormat: "user%d"
   giteaUserNumber: 15
   giteaUserPassword: openshift
   giteaMigrateRepositories: true
