@@ -7,7 +7,7 @@ metadata:
 spec:
   giteaSsl: true
   giteaAdminUser: admin
-  giteaAdminPassword: "12345678"
+  giteaAdminPassword: ""
   giteaAdminPasswordLength: 8
   giteaAdminEmail: opentlc-mgr@redhat.com
   giteaCreateUsers: true

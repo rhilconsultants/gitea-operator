@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gitea
+spec:
+  destination:
+    name: ''
+    namespace: gitea
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: gitea/
+    repoURL: 'https://github.com/rhilconsultants/gitea-operator.git'
+    targetRevision: main
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
