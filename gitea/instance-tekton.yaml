@@ -6,12 +6,12 @@ metadata:
     argocd.argoproj.io/sync-wave: "3"
 spec:
   giteaSsl: true
-  giteaAdminUser: admin
-  giteaAdminPassword: "Aa12345678!"
+  giteaAdminUser: opentlc-mgr
+  giteaAdminPassword: "32"
   giteaAdminPasswordLength: 11
   giteaAdminEmail: opentlc-mgr@redhat.com
   giteaCreateUsers: true
-  giteaGenerateUserFormat: "user%d"
+  giteaGenerateUserFormat: "user-%d"
   giteaUserNumber: 15
   giteaUserPassword: openshift
   giteaMigrateRepositories: true
