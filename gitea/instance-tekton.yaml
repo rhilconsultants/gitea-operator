@@ -1,0 +1,19 @@
+apiVersion: gpte.opentlc.com/v1
+kind: Gitea
+metadata:
+  name: gitea-with-admin
+spec:
+  giteaSsl: true
+  giteaAdminUser: admin
+  giteaAdminPassword: "12345678"
+  giteaAdminPasswordLength: 8
+  giteaAdminEmail: opentlc-mgr@redhat.com
+  giteaCreateUsers: true
+  giteaGenerateUserFormat: "user%d"
+  giteaUserNumber: 15
+  giteaUserPassword: openshift
+  giteaMigrateRepositories: true
+  giteaRepositoriesList:
+  - repo: https://github.com/magreenberg/httpserver-ci-demo.git
+    name: httpserver-ci-demo
+    private: false
