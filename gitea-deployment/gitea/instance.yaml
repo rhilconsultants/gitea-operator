@@ -8,11 +8,11 @@ spec:
   giteaSsl: true
   giteaAdminUser: opentlc-mgr
   giteaAdminPassword: ""
-  giteaAdminPasswordLength: 32
+  giteaAdminPasswordLength: 6
   giteaAdminEmail: opentlc-mgr@redhat.com
   giteaCreateUsers: true
   giteaGenerateUserFormat: "user%d"
-  giteaUserNumber: 2
+  giteaUserNumber: 20
   giteaUserPassword: openshift
   giteaMigrateRepositories: true
   giteaWebhookAllowedHostList: '*'
@@ -21,15 +21,9 @@ spec:
   giteaStartSshServer: true
   giteaAllowLocalNetworkMigration: true
   giteaRepositoriesList:
-  - repo: https://github.com/tal-hason/cd-repo-demo.git
-    name: cd-repo-demo
+  - repo: https://github.com/magreenberg/httpserver-ci-demo.git
+    name: httpserver
     private: false
-  - repo: https://github.com/tal-hason/nodejs-demo-app.git
-    name: nodejs-demo-app
-    private: false
-  - repo: https://github.com/tal-hason/angular-demo-app.git
-    name: angular-demo-app
-    private: false
-  - repo: https://github.com/tal-hason/dotnet-demo-app.git
-    name: dotnet-demo-app
+  - repo: https://github.com/magreenberg/httpserver-ci-cd-demo.git
+    name: httpserver-cd
     private: false

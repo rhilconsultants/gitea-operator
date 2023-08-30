@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/rhilconsultants/gitea-operator.git
-      revision: main
+      revision: openshift-pipelines-training
       directories:
       - path: "gitea-deployment/*"
   template:
@@ -17,7 +17,7 @@ spec:
       project: gitea
       source:
         repoURL: https://github.com/rhilconsultants/gitea-operator.git
-        targetRevision: main
+        targetRevision: openshift-pipelines-training
         path: '{{path}}'
       destination:
         server: 'https://kubernetes.default.svc'
