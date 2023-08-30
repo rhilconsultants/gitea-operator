@@ -3,22 +3,23 @@
 to Quick start the repo just
 
 ```Bash
-# login to you openshift cluster with you cluster-admin user
-# And run the Following:
+# Login to your OpenShift cluster with a user that has cluster-admin privileges.
+# Run the Following:
 
-oc apply -k cd/argo-app.yaml
+oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:openshift-gitops:openshift-gitops-argocd-application-controller
+oc apply -k cd
 
 ```
 
 this will create the following:
 
-1. An argoCD Application that directs to the "<https://github.com/rhilconsultants/gitea-operator.git>" repository
+1. An ArgoCD Application that directs to the "<https://github.com/rhilconsultants/gitea-operator.git>" repository
 2. An ArgoCD Project that will group all Gitea ArgoCD resources under it
 3. A namespace named "gitea"
 4. A Catalog Source with the Gitea Operator.
 5. The Gitea Operator Subscription.
-6. The Gitea Openrator CR.
-7. A HTTP Service to work internaly with the Gitea Webhooks
+6. The Gitea Operator CR.
+7. A HTTP Service to work internally with the Gitea Webhooks
 
 ## Understanding the Gitea Operator CR manifest
 
